@@ -45,11 +45,10 @@ if ($_SERVER["REQUEST_METHOD"] === "POST") {
       <div class="mb-3">
         <label for="operacion" class="form-label">Operación:</label>
         <select name="operacion" id="operacion" class="form-select" required>
-          <option disabled selected>Selecciona una opción</option>
-          <option value="Sum">Suma</option>
-          <option value="Res">Resta</option>
-          <option value="Mul">Multiplicación</option>
-          <option value="Div">División</option>
+          <option value="S">Suma</option>
+          <option value="R">Resta</option>
+          <option value="M">Multiplicación</option>
+          <option value="D">División</option>
         </select>
       </div>
       <button type="submit" class="btn btn-primary">Calcular</button>
@@ -58,7 +57,7 @@ if ($_SERVER["REQUEST_METHOD"] === "POST") {
     <!-- Mostrar resultado -->
     <?php if (!is_null($resultado)): ?>
       <div class="alert alert-info mt-4">
-        <strong>Resultado es :</strong> <?= $resultado ?>
+        <strong>Resultado es:</strong> <?= $resultado ?>
       </div>
     <?php endif; ?>
   </div>
